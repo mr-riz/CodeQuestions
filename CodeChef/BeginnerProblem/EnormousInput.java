@@ -1,17 +1,33 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
-public class EnormousInput {
-	public static void main(String[] args) {
-		try {
-			System.setIn(new FileInputStream("input.txt"));
-			System.setOut(new PrintStream(new FileOutputStream("output.txt")));
-		} catch (Exception e) {
-			System.err.println("Error");
-		}
+public class EnormousInput{
+	public static void main(String[] args)
+	{
+		Scanner sc =new Scanner (System.in);
+		int n=sc.nextInt();
+		int k=sc.nextInt();
+		int count=0;
+          
+         
+          	for(int i=1;i<=n;i++)
+		{
+			int num=sc.nextInt();
+			
+				if(num%k==0)
+			{
+				count=count+1;
+			}
 
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		System.out.println(n);
+
+			}
+			
+		
+
+          
+		
+		System.out.println(count);
+
+
+
 	}
 }
